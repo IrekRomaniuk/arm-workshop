@@ -1,4 +1,6 @@
 {
+    "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
     "parameters": {
         "webAppName": {
             "type": "string"
@@ -10,8 +12,8 @@
     },
     "resources": [
         {
-            "apiVersion": "2016-03-01",
-            "name": "[variables('webAppPlan')]",
+            "apiVersion": "2016-08-01",
+            "name": "[parameters('webAppName')]",
             "type": "Microsoft.Web/sites",
             "properties": {
                 "name": "[parameters('webAppName')]",
@@ -39,7 +41,5 @@
                 "Name": "F1"
             }
         }
-    ],
-    "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
-    "contentVersion": "1.0.0.0"
+    ]
 }
