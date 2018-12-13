@@ -6,7 +6,12 @@
       "value": "azureuser"
     },
     "adminPassword": {
-      "value": "Password1"
+      "reference": {
+        "keyVault": {
+            "id": "/subscriptions/a5b60a98-c6fe-493c-bba2-5b2e0dd46cdd/resourceGroups/cloud-shell-storage-eastus/providers/Microsoft.KeyVault/vaults/niuk"
+        },
+        "secretName": "ubuntuDefaultPassword"
+    }
     },
     "dnsLabelPrefix": {
       "value": "niuk"
